@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-const poppins = localFont({
+export const poppins = localFont({
   src: [
     {
       path: "/fonts/Poppins-Regular.ttf",
@@ -17,7 +17,7 @@ const poppins = localFont({
   variable: "--font-poppins", // Custom variable for CSS
 });
 
-const questrial = localFont({
+export const questrial = localFont({
   src: [
     {
       path: "/fonts/Questrial-Regular.ttf",
@@ -36,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={${poppins.variable} ${questrial.variable} antialiased}>
+      <body className={'${poppins.variable} ${questrial.variable} antialiased'}>
         {children}
       </body>
     </html>
