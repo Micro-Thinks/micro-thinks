@@ -36,7 +36,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${questrial.variable} antialiased`}>
+      <body className={${poppins.variable} ${questrial.variable} antialiased}>
         {children}
       </body>
     </html>
