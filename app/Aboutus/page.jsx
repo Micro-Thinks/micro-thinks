@@ -1,45 +1,220 @@
+// "use client"
+// import { motion } from "framer-motion";
+// import Image from "next/image";
+
+// const Aboutus = () => {
+//   return (
+//     <div className="flex w-screen h-screen">
+//       <div className="w-2/3">
+//         <motion.div
+//          initial={{ opacity: 0, x: -50 }}
+//          animate={{ opacity: 1, x: 0 }}
+//          transition={{ duration: 0.5 }}
+//         className="flex relative">
+//           <div className="absolute left-[47px] top-[4rem] rounded-[150px] overflow-hidden">
+//             <Image
+//               src="/decorative-img1.webp"
+//               alt="section image"
+//               width={340}
+//               height={469}
+//             />
+//           </div>
+//           <div className="absolute top-[8rem] left-[399px] rounded-[150px] overflow-hidden">
+//             <Image
+//               src="/decorative-img2.webp"
+//               alt="section image"
+//               width={340}
+//               height={469}
+//             />
+//           </div>
+//           <div className="absolute top-[33rem] left-[159px]">
+//             <Image
+//               src="/people-with-logo.webp"
+//               alt="people image"
+//               width={115}
+//               height={148}
+//             />
+//           </div>
+//         </motion.div>
+//       </div>
+//       <div className="relative w-1/3 top-[18rem] right-[12rem] ">
+//         <motion.div 
+//         initial={{ opacity: 0, x: 50 }}
+//         animate={{ opacity: 1, x: 0 }}
+//         exit={{ opacity: 0, x: -50 }} 
+//         transition={{ duration: 0.5 }}
+//         className="absolute space-y-12 ">
+//           <h1 className="font-semibold text-3xl text-[#1F2456] leading-[54px]">About Us</h1>
+//           <p className='text-[#1F2456] font-light'>
+//             Empowering hotels with customized digital strategies to drive
+//             bookings, boost visibility, and enhance guest experiences.
+//           </p>
+//           <button className=" bg-[#F89522] px-3 py-1 text-black rounded-xl">Learn More</button>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Aboutus;
+
+
+
+
+
+
+// "use client";
+// import { motion } from "framer-motion";
+// import Image from "next/image";
+
+// const Aboutus = () => {
+//   return (
+//     <div className="flex flex-col lg:flex-row w-screen h-screen">
+//       {/* Image Container */}
+//       <div className="w-full lg:w-2/3 relative">
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           transition={{ duration: 0.5 }}
+//           className="flex lg:relative flex-col lg:flex-row items-center lg:items-start lg:justify-start space-y-8 lg:space-y-0 lg:space-x-0 relative"
+//         >
+//           {/* Image 1 */}
+//           <div className="relative rounded-[150px] overflow-hidden mx-auto lg:absolute lg:left-[47px] lg:top-[4rem]">
+//             <Image
+            
+//               src="/decorative-img1.webp"
+//               alt="section image"
+//               width={340}
+//               height={469}
+//             />
+//           </div>
+
+//           {/* Image 2 */}
+//           <div className="relative rounded-[150px] overflow-hidden mx-auto lg:absolute lg:top-[8rem] lg:left-[399px]">
+//             <Image
+//               src="/decorative-img2.webp"
+//               alt="section image"
+//               width={340}
+//               height={469}
+//             />
+//           </div>
+
+//           {/* Image 3 */}
+//           <div className="relative mx-auto lg:absolute lg:top-[33rem] lg:left-[159px]">
+//             <Image
+//               src="/people-with-logo.webp"
+//               alt="people image"
+//               width={115}
+//               height={148}
+//             />
+//           </div>
+//         </motion.div>
+//       </div>
+
+//       {/* About Us Text */}
+//       <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[12rem] px-4 lg:px-0">
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           animate={{ opacity: 1, x: 0 }}
+//           exit={{ opacity: 0, x: -50 }}
+//           transition={{ duration: 0.5 }}
+//           className="space-y-6 lg:space-y-12"
+//         >
+//           <h1 className="font-semibold text-3xl text-[#1F2456] leading-[54px] text-center lg:text-left">
+//             About Us
+//           </h1>
+//           <p className="text-[#1F2456] font-light text-center lg:text-left">
+//             Empowering hotels with customized digital strategies to drive
+//             bookings, boost visibility, and enhance guest experiences.
+//           </p>
+//           <div className="flex justify-center lg:justify-start">
+//             <button className="bg-[#F89522] px-5 py-2 text-black rounded-xl">
+//               Learn More
+//             </button>
+//           </div>
+//         </motion.div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Aboutus;
+
+
+
+
+"use client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Aboutus = () => {
   return (
-    <div className="flex w-screen h-screen">
-      <div className="w-2/3">
-        <div className="flex relative">
-          <div className="absolute left-[47px] top-[98px] rounded-[150px] overflow-hidden">
+    <div id="about-us" className="flex  flex-col lg:flex-row w-screen h-screen">
+      {/* Image Container */}
+      <div className="relative w-full lg:w-2/3">
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5 }}
+          className="relative flex lg:relative"
+        >
+          {/* Image 1 */}
+          <div className="absolute left-[7%] top-[6rem] lg:left-[47px] lg:top-[4rem] rounded-[150px] overflow-hidden">
             <Image
               src="/decorative-img1.webp"
               alt="section image"
-              width={340}
-              height={469}
+              width={240}  
+              height={329}  
+              className="w-[160px] h-[310px] lg:w-[340px] lg:h-[469px]"
             />
           </div>
-          <div className="absolute top-[178px] left-[399px] rounded-[150px] overflow-hidden">
+
+          {/* Image 2 */}
+          <div className="absolute left-[12rem] top-[8rem] lg:left-[399px] lg:top-[8rem] rounded-[150px] overflow-hidden">
             <Image
               src="/decorative-img2.webp"
               alt="section image"
-              width={340}
-              height={469}
+              width={240} 
+              height={329}
+              className="w-[160px] h-[310px] lg:w-[340px] lg:h-[469px]"
             />
           </div>
-          <div className="absolute top-[574px] left-[159px]">
+
+          {/* Image 3 */}
+          <div className="absolute left-[4rem] top-[26rem] lg:left-[159px] lg:top-[33rem]">
             <Image
               src="/people-with-logo.webp"
               alt="people image"
-              width={115}
-              height={148}
+              width={80}  
+              height={108} 
+              className="w-[80px] h-[108px] lg:w-[115px] lg:h-[148px]"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
-      <div className="relative w-1/3 top-[257px] ">
-        <div className="absolute ">
-          <h1 className="font-semibold text-[36px] leading-[54px]">About Us</h1>
-          <p>
+
+      {/* About Us Text */}
+      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[12rem] px-4 lg:px-0 mt-8 lg:mt-0">
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -50 }}
+          transition={{ duration: 0.5 }}
+          className="space-y-6 lg:space-y-12"
+        >
+          <h1 className="font-semibold text-3xl text-[#1F2456] leading-[54px]  lg:text-left">
+            About Us
+          </h1>
+          <p className="text-[#1F2456] absolute top-[30rem] lg:top-[1rem] lg:right-[12rem]  font-light text-center lg:text-left">
             Empowering hotels with customized digital strategies to drive
             bookings, boost visibility, and enhance guest experiences.
           </p>
-          <button className="button">Learn More</button>
-        </div>
+          <div className="flex justify-center absolute lg:top-[8rem] lg:left-[0rem] top-[36rem] left-[5rem] lg:justify-start">
+            <button className="bg-[#F89522] px-5 py-2 text-black rounded-xl">
+              Learn More
+            </button>
+          </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -45,7 +45,15 @@ h6 {
 }
 html {
   width: 100%;
+  scroll-behavior: smooth;
 }
 body {
   overflow-y: auto;
+}
+
+#home,
+#about-us,
+#services,
+#contact {
+  padding-top: 100px; /* Adjust based on your navbar height */
 }
