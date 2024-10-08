@@ -1,11 +1,13 @@
 "use client"
 import Image from 'next/image';
-import Link from 'next/link';
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar/page';
+import { useRef } from 'react';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const homeRef = useRef(null);
+
 
   const navbar = [
     { name: "Home", sectionId: "home" },
@@ -13,6 +15,8 @@ const Navbar = () => {
     { name: "Services", sectionId: "services" },
     { name: "Contact", sectionId: "contact" },
   ];
+
+  
 
 
 const scrollToSection = (sectionId) => {
@@ -24,10 +28,13 @@ const scrollToSection = (sectionId) => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen); 
 
   return (
-    <div className="fixed top-0 w-full bg-white z-50 flex items-center justify-between p-6 border-b-[2] border-b-gray-600 shadow-lg">
+    <div className="fixed top-0 w-full bg-white z-50 flex items-center  justify-between p-6 border-b-[2] border-b-gray-600 shadow-lg">
       {/* Logo Section */}
-      <div className="logo">
+      <div className="logo cursor-pointer"
+      >
         <Image
+          
+          onClick={()=> scrollToSection("home")}
           src="/microthinks-logo.webp"
           alt="microthinks-logo"
           width={100}
@@ -40,8 +47,8 @@ const scrollToSection = (sectionId) => {
       {navbar.map((nav, index) => (
           <button
             key={index}
-            onClick={() => scrollToSection(nav.sectionId)} // Handle click to scroll
-            className="text-md"
+            onClick={() => scrollToSection(nav.sectionId)} 
+            className="text-md hover:text-[#F89522] ease-in-out duration-300"
           >
             {nav.name}
           </button>

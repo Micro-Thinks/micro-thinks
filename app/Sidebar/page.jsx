@@ -35,7 +35,7 @@ const Sidebar = ({ navbar, closeSidebar }) => {
       </div>
       {navbar.map((nav, index) => (
         <Link key={index} href={nav.path}>
-          <p onClick={closeSidebar} className="text-xl font-semibold">
+          <p onClick={closeSidebar} className="text-xl hover:text-[#F89522] ease-in-out duration-300 font-semibold">
             {nav.name}
           </p>
         </Link>
