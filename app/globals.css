@@ -2,21 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-/* styles/globals.css */
-
 :root {
-  /* Define font families */
   --font-poppins: "Poppins", sans-serif;
   --font-questrial: "Questrial", sans-serif;
-
-  /* Define color variables (add your color values here) */
-  --color-dark-navy: #1f2456; /* Replace with your actual color code */
-  --color-light-gray: #eae8e8; /* Replace with your actual color code */
-  --color-orange: #f89522; /* Replace with your actual color code */
-  --color-blue-gray: #808eab; /* Replace with your actual color code */
 }
 
-/* Font definitions */
 @font-face {
   font-family: "Poppins";
   src: url("/fonts/Poppins-Regular.ttf") format("truetype");
@@ -35,11 +25,9 @@
   font-weight: 400;
 }
 
-/* Global styles */
 body {
-  font-family: var(--font-poppins); /* Default font */
-  color: var(--color-dark-navy); /* Body text color */
-  background-color: var(--color-light-gray); /* Background color */
+  font-family: var(--font-poppins);
+  color: var(--color-dark-navy);
 }
 
 h1,
@@ -48,31 +36,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-questrial); /* Headings font */
-  color: var(--color-dark-navy); /* Headings color */
+  font-family: var(--font-questrial);
+  color: var(--color-dark-navy);
 }
 
-a,
-button {
-  color: var(--color-orange); /* Link and button color */
-  font-weight: 600; /* Font weight for links and buttons */
+::-webkit-scrollbar {
+  display: none;
 }
-
-p {
-  font-size: 1rem; /* Default paragraph size */
-  color: var(--color-blue-gray); /* Paragraph color */
+html {
+  width: 100%;
 }
-
-button {
-  background-color: var(--color-dark-navy); /* Button background color */
-  color: white; /* Button text color */
-  padding: 10px 20px; /* Button padding */
-  border-radius: 5px; /* Button border radius */
-  border: none; /* Remove default border */
-  font-family: var(--font-poppins); /* Button font */
-  cursor: pointer; /* Change cursor to pointer */
+body {
+  overflow-y: auto;
 }
-
-button:hover {
-  background-color: var(--color-orange);
-} /* Change button color on hover */

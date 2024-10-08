@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const page = () => {
+const Aboutus = () => {
   return (
     <div className="flex w-screen h-screen">
       <div className="w-2/3">
@@ -45,4 +45,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Aboutus;
