@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="flex flex-col mb-4 space-y-8 md:mb-0">
             <h1 className='text-xl font-semibold'>About Us</h1>
-          <Image src='/microthinks-logo.webp' height={100} width={100} alt='microthinks-logo' />
+          <Image src='/Assets1.png'  height={100} width={100} alt='microthinks-logo' />
           <p className='w-64'>
             MicroThinks drives hotel growth with tailored digital solutions and expert support to maximize your online presence and revenue.
           </p>

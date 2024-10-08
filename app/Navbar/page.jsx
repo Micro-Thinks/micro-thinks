@@ -2,11 +2,9 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar/page';
-import { useRef } from 'react';
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const homeRef = useRef(null);
 
 
   const navbar = [
@@ -24,6 +22,8 @@ const scrollToSection = (sectionId) => {
   if(section) {
     section.scrollIntoView({behavior:"smooth"})
   }
+  setIsSidebarOpen(false)
+
 }
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen); 
 
@@ -68,7 +68,7 @@ const scrollToSection = (sectionId) => {
       </div>
 
       {isSidebarOpen && (
-        <Sidebar navbar={navbar} closeSidebar={() => setIsSidebarOpen(false)} />
+        <Sidebar navbar={navbar} closeSidebar={() => setIsSidebarOpen(false)} scrollToSection={scrollToSection} />
       )}
     </div>
   );
