@@ -1,7 +1,7 @@
 
 "use client";
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Import useEffect
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero = () => {
@@ -66,6 +66,12 @@ const Hero = () => {
   const handleButtonClick = (index) => {
     setCurrentSlide(index);
   };
+
+  useEffect(() => {
+    const interval = setInterval(handleNext, 3000);
+
+    return () => clearInterval(interval); 
+  }, [currentSlide]);
 
   return (
     <div id="home" className="relative h-[100vh] lg:h-[100vh] overflow-hidden">
