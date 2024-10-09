@@ -51,7 +51,7 @@ const Aboutus = () => {
       </div>
 
       {/* About Us Text */}
-      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[6rem] px-4 lg:px-0 mt-8 lg:mt-0">
+      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[2rem] px-4 lg:px-0 mt-8 lg:mt-0">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
