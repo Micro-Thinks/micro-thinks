@@ -31,16 +31,19 @@ const List = () => {
           </div>
         </div> */}
         <div className=" absolute top-32 left-96 h-[80vh] rounded-l-2xl w-[74.7vw] p-10 translate-x-0  bg-[#1F2456] ">
-            <div className=" ">
-                <h1 className="text-3xl text-white tracking-widest flex items-end justify-end  ">We list your porperty on OTA platforms</h1>
-                <ul className=" grid grid-cols-1 lg:grid-cols-3 gap-12 text-3xl  absolute top-32 left-[32rem] z-40 text-white  ">
-                    <li className="text-white z-10">trivago</li>
-                    <li>Booking.com</li>
-                    <li>Skyscanner</li>
-                    <li>Expedia</li>
-                    <li>airbnb</li>
-                </ul>
-            </div>
+          <div className=" ">
+            <h1 className="text-3xl text-white tracking-widest flex items-end justify-end  ">
+              We list your porperty on OTA platforms
+            </h1>
+            <ul className=" grid grid-cols-1 lg:grid-cols-3 gap-12 text-3xl  absolute top-32 left-[32rem] z-40 text-white  ">
+              <li className="text-white z-10">trivago</li>
+              <li>Booking.com</li>
+              <li>Skyscanner</li>
+              <li>Expedia</li>
+              <li>airbnb</li>
+              <li>agoda</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
