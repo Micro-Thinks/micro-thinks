@@ -2,51 +2,41 @@ import Image from "next/image";
 
 const List = () => {
   return (
-    <div className="mt-[10%]">
+  <div id="OTA">
+
+    <div className="lg:mt-[16%] mt-[10%]">
       <div className="relative flex">
         {/* Image Container */}
-        <div className="w-full sm:w-[50%]">
+        <div className="w-auto sm:w-[50%]">
           <Image
             src="/Listservice.png"
             alt="listservice"
-            className="relative rounded-r-2xl z-10 object-cover w-full h-full"
+            className="relative rounded-r-3xl z-10 object-cover w-[80vw]  h-[100%] lg:w-full lg:h-full"
             height={800}
             width={800}
           />
         </div>
 
-        {/* Text Container with Blue Background */}
-        {/* <div className="absolute top-[25%] left-[50%] transform -translate-x-[50%] sm:left-[50%] w-[] sm:w-[50%] bg-[#1F2456] rounded-l-2xl p-8">
-          <h1 className="tracking-widest text-2xl text-white text-center sm:text-end p-10">
-            We list your property on OTA platforms
-          </h1>
-          <div className="flex flex-wrap justify-center sm:justify-end gap-6 mt-4">
-            <span className="text-white">Booking.com</span>
-            <span className="text-white">Skyscanner</span>
-            <span className="text-white">Tripadvisor</span>
-            <span className="text-white">Expedia</span>
-            <span className="text-white">Airbnb</span>
-            <span className="text-white">Agoda</span>
-            <span className="text-white">Trivago</span>
-          </div>
-        </div> */}
-        <div className=" absolute top-32 left-96 h-[80vh] rounded-l-2xl w-[74.7vw] p-10 translate-x-0  bg-[#1F2456] ">
-          <div className=" ">
-            <h1 className="text-3xl text-white tracking-widest flex items-end justify-end  ">
-              We list your porperty on OTA platforms
-            </h1>
-            <ul className=" grid grid-cols-1 lg:grid-cols-3 gap-12 text-3xl  absolute top-32 left-[32rem] z-40 text-white  ">
-              <li className="text-white z-10">trivago</li>
-              <li>Booking.com</li>
-              <li>Skyscanner</li>
-              <li>Expedia</li>
-              <li>airbnb</li>
-              <li>agoda</li>
-            </ul>
-          </div>
+     
+        <div className=" absolute lg:top-32 top-[70%]    lg:left-96 lg:h-[80vh] h-[50vh] rounded-l-2xl w-[100vw]  lg:w-[74.7vw]  translate-x-0  bg-[#1F2456] ">
+            <div className=" p-10   ">
+                <h1 className="lg:text-3xl text-xl mt-8 p-6    text-white tracking-widest flex items-end justify-end  ">We list your porperty on OTA platforms</h1>
+               
+<div className=" grid grid-cols-3 lg:grid-cols-3 gap-10 p-2 items-center justify-center lg:gap-12 text-3xl  absolute lg:top-40 lg:left-[28rem] top-44   z-40 text-white  ">
+
+                <Image src='/Tripadvisor.webp'  alt="image"  height={100} width={100} />
+                <Image src='/Airbnb.webp'  alt="image" height={100} width={100} />
+                <Image src='/Agonda.webp'  alt="image" height={100} width={100} />
+                <Image src='/Expedia.webp'  alt="image" height={100} width={100} />
+                <Image  src='/skyscanner.webp'  alt="image" height={100} width={100}/>
+                <Image src='/trivago-logo-vector.webp'  alt="image" height={100} width={100} />
+</div>
+            </div>
         </div>
       </div>
     </div>
+  </div>
+
   );
 };
 
