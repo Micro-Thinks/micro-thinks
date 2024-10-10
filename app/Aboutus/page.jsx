@@ -1,12 +1,13 @@
-
-
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
 const Aboutus = () => {
   return (
-    <div id="about-us" className="flex  flex-col lg:flex-row w-screen h-screen">
+    <div
+      id="about-us"
+      className="flex  flex-col lg:flex-row w-screen h-[832px]"
+    >
       {/* Image Container */}
       <div className="relative w-full lg:w-2/3">
         <motion.div
@@ -20,8 +21,8 @@ const Aboutus = () => {
             <Image
               src="/decorative-img1.webp"
               alt="section image"
-              width={240}  
-              height={329}  
+              width={240}
+              height={329}
               className="w-[160px] h-[310px] lg:w-[400px] lg:h-[500px]"
             />
           </div>
@@ -31,7 +32,7 @@ const Aboutus = () => {
             <Image
               src="/decorative-img2.webp"
               alt="section image"
-              width={240} 
+              width={240}
               height={329}
               className="w-[160px] h-[310px] lg:w-[400px] lg:h-[500px]"
             />
@@ -42,8 +43,8 @@ const Aboutus = () => {
             <Image
               src="/people-with-logo.webp"
               alt="people image"
-              width={80}  
-              height={108} 
+              width={80}
+              height={108}
               className="w-[80px] h-[108px] lg:w-[115px] lg:h-[148px]"
             />
           </div>
@@ -51,7 +52,7 @@ const Aboutus = () => {
       </div>
 
       {/* About Us Text */}
-      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[2rem] px-4 lg:px-0 mt-8 lg:mt-0">
+      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[2rem] px-4  lg:px-6 mt-8 lg:mt-0">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
@@ -59,14 +60,14 @@ const Aboutus = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6 lg:space-y-12"
         >
-          <h1 className="font-semibold text-3xl text-[#1F2456] leading-[54px]  lg:text-left">
+          <h1 className="font-semibold text-3xl text-[#1F2456] lg:text-left">
             About Us
           </h1>
           <p className="text-[#1F2456] absolute top-[30rem] lg:top-[1rem] lg:right-[12rem]  font-light text-center lg:text-left">
             Empowering hotels with customized digital strategies to drive
             bookings, boost visibility, and enhance guest experiences.
           </p>
-          <div className="flex justify-center absolute lg:top-[8rem] lg:left-[0rem] top-[36rem] left-[5rem] lg:justify-start">
+          <div className="flex justify-center absolute lg:top-[12rem] lg:left-[0rem] top-[36rem] left-[5rem] lg:justify-start">
             <button className="bg-[#F89522] px-5 py-2 text-black rounded-xl">
               Learn More
             </button>

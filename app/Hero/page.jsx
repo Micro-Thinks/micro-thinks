@@ -1,8 +1,7 @@
-
 "use client";
-import Image from 'next/image';
-import React, { useState, useEffect } from 'react'; // Import useEffect
-import { motion, AnimatePresence } from 'framer-motion';
+import Image from "next/image";
+import React, { useState, useEffect } from "react"; // Import useEffect
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -14,7 +13,9 @@ const Hero = () => {
         <>
           <span className="text-[#1F2456] font-extrabold">Your Brand, </span>
           <span className="text-[#808EAB]">Our Strategy, </span> <br />
-          <span className="text-[#F89522] font-extrabold mt-10 block">Ultimate Growth</span>
+          <span className="text-[#F89522] font-extrabold mt-10 block">
+            Ultimate Growth
+          </span>
         </>
       ),
       description:
@@ -70,7 +71,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(handleNext, 3000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, [currentSlide]);
 
   return (
@@ -122,10 +123,7 @@ const Hero = () => {
                     >
                       {slide.description}
                     </motion.p>
-                    <button
-                      className="bg-[#F89522] px-5 py-2 rounded-3xl"
-                      
-                    >
+                    <button className="bg-[#F89522] px-5 py-2 rounded-3xl">
                       Let's Start
                     </button>
                   </div>
@@ -136,7 +134,7 @@ const Hero = () => {
       </div>
 
       {/* Button Container for large screens */}
-      <div className="hidden lg:flex w-full absolute bottom-8 justify-center">
+      <div className="hidden lg:flex w-full absolute bottom-0 justify-center">
         <button
           className="bg-[#1F2456] w-96 text-white px-4 py-4"
           onClick={() => handleButtonClick(0)}
@@ -160,16 +158,6 @@ const Hero = () => {
           onClick={() => handleButtonClick(3)}
         >
           Custom Web Design
-        </button>
-      </div>
-
-      {/* Arrows for mobile view */}
-      <div className="lg:hidden absolute top-56 inset-0 flex justify-between items-center px-4">
-        <button onClick={handlePrev} className="text-black text-4xl">
-          &lt;
-        </button>
-        <button onClick={handleNext} className="text-black text-4xl">
-          &gt;
         </button>
       </div>
     </div>
