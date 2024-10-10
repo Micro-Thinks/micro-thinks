@@ -160,16 +160,6 @@ const Hero = () => {
           Custom Web Design
         </button>
       </div>
-
-      {/* Arrows for mobile view */}
-      <div className="lg:hidden absolute top-56 inset-0 flex justify-between items-center px-4">
-        <button onClick={handlePrev} className="text-black text-4xl">
-          &lt;
-        </button>
-        <button onClick={handleNext} className="text-black text-4xl">
-          &gt;
-        </button>
-      </div>
     </div>
   );
 };
