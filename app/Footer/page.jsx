@@ -73,7 +73,9 @@ const Footer = () => {
           <div className="flex flex-col mb-4 md:mb-0 md:w-1/4">
             <h3 className="text-lg font-semibold mb-2">Get in touch</h3>
             <div className='block space-y-4'>
-              <p>info@microthinks.com</p>
+              <Link href='mailto : info@microthinks.com  '>
+              info@microthinks.com
+              </Link>
               <h3 className="text-lg font-semibold mb-2">Office</h3>
               <p>Lawrence Road, Near China Chowk, Lahore, Punjab, Pakistan.</p>
               <p>Mon to Sat: 9am to 5pm</p>
