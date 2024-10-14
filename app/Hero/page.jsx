@@ -13,7 +13,7 @@ const Hero = () => {
         <>
           <span className="text-[#1F2456] font-extrabold">Your Brand, </span>
           <span className="text-[#808EAB]">Our Strategy, </span> <br />
-          <span className="text-[#F89522] font-extrabold mt-10 block">
+          <span className="text-[#F89522] font-extrabold  block">
             Ultimate Growth
           </span>
         </>
@@ -97,15 +97,15 @@ const Hero = () => {
                       <Image
                         src={slide.imgSrc}
                         alt="image"
-                        height={500}
+                        height={500}  
                         width={500}
-                        className="w-64 h-44 mt-[4.4rem] lg:mt-1 lg:w-full lg:h-auto object-contain"
+                        className="w-64 h-44  lg:mt-1 lg:w-full lg:h-[50vh] object-contain"
                       />
                     </motion.div>
                   )}
-                  <div className="space-y-10 text-center lg:text-left lg:order-1 lg:ml-16">
+                  <div className="space-y-4 text-center lg:text-left lg:order-1 lg:ml-16">
                     <motion.h1
-                      className="font-extrabold tracking-wider text-3xl lg:text-5xl font-sans"
+                      className="font-extrabold tracking-wider mt-1 xl:mt-4 w-full text-3xl lg:text-5xl font-sans"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7 }}
