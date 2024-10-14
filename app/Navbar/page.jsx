@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="logo cursor-pointer">
         <Image
           onClick={() => scrollToSection("home")}
-          src="/microthinks-logo.webp"
+          src="/images/microthinks-logo.webp"
           alt="microthinks-logo"
           width={100}
           height={100}
