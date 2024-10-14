@@ -49,7 +49,7 @@ const Navbar = () => {
         ))}
       </div>
 
-      <div className="hidden md:block bg-[#F89522] px-3 py-2 rounded-3xl">
+      <div className="hidden md:block bg-[#F89522] text-white px-3 py-2 rounded-3xl">
         <button>Get Started</button>
       </div>
 
