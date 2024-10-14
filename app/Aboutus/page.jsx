@@ -64,8 +64,9 @@ const Aboutus = () => {
             About Us
           </h1>
           <p className="text-[#1F2456] absolute top-[30rem] lg:top-[1rem] lg:right-[12rem]  font-light text-center lg:text-left">
-            Empowering hotels with customized digital strategies to drive
-            bookings, boost visibility, and enhance guest experiences.
+            At Microthinks.com, we elevate your hotel’s online visibility with
+            innovative and customized solutions to strengthen guest
+            satisfaction.
           </p>
           <div className="flex justify-center absolute lg:top-[12rem] lg:left-[0rem] top-[36rem] left-[5rem] lg:justify-start">
             <button className="bg-[#F89522] px-5 py-2 text-black rounded-xl">

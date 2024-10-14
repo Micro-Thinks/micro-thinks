@@ -19,7 +19,7 @@ const Hero = () => {
         </>
       ),
       description:
-        "At our hospitality marketing company, we believe that the journey to ultimate success begins with a strong collaboration. Your hotel’s unique identity and vision are at the forefront of our strategic approach. Our strategy is built on understanding your hotel’s strengths and opportunities, allowing us to create specifically made solutions that enhance your visibility and appeal. Mutually, we will raise your hotel to new heights by utilizing our hotel marketing services. We ensure that your dream related to your hotel transforms into reality and your achievement story grows with every guest who steps through your doors. Let us partner with you to boost your hotel’s online presence with our hotel’s promotion strategies to meet your business goals.",
+        "At our hospitality marketing company, we believe that the journey to ultimate success begins with a strong collaboration. Your hotel’s unique identity and vision are at the forefront of our strategic approach.",
     },
     {
       imgSrc: "/googleads.webp",
@@ -52,7 +52,7 @@ const Hero = () => {
         </>
       ),
       description:
-        "Our master group understands that your website serves as a digital gateway to your hotel. Our web development services are designed to highlight your hotel’s identity and values, ensuring a highly optimized and user-friendly website for your customers. Our team adopts cutting-edge technologies and modern design trends to deliver well-responsive sites that shine on all devices, from desktop computers to smartphones. An engaging web presence will build a remarkable online presence and increase the hotel’s direct booking rate. By combining eye-catching visuals, engaging content, and an efficient booking system, we develop websites that capture visitor’s attention and transform them into loyal guests.",
+        "Our master group understands that your website serves as a digital gateway to your hotel. Our web development services are designed to highlight your hotel’s identity and values, ensuring a highly optimized and user-friendly website for your customers.",
     },
   ];
 
