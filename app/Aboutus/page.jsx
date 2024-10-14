@@ -19,7 +19,7 @@ const Aboutus = () => {
           {/* Image 1 */}
           <div className="absolute left-[7%] top-[6rem] lg:left-[47px] lg:top-[4rem] rounded-[150px] overflow-hidden">
             <Image
-              src="/decorative-img1.webp"
+              src="/images/decorative-img1.webp"
               alt="section image"
               width={240}
               height={329}
@@ -30,7 +30,7 @@ const Aboutus = () => {
           {/* Image 2 */}
           <div className="absolute left-[12rem] top-[8rem] lg:left-[30rem] lg:top-[8rem] rounded-[150px] overflow-hidden">
             <Image
-              src="/decorative-img2.webp"
+              src="/images/decorative-img2.webp"
               alt="section image"
               width={240}
               height={329}
@@ -41,7 +41,7 @@ const Aboutus = () => {
           {/* Image 3 */}
           <div className="absolute left-[4rem] top-[26rem] lg:left-[12rem] lg:top-[36rem]">
             <Image
-              src="/people-with-logo.webp"
+              src="/images/people-with-logo.webp"
               alt="people image"
               width={80}
               height={108}
@@ -68,7 +68,6 @@ const Aboutus = () => {
             At Microthinks.com, we elevate your hotel’s online visibility with
             innovative and customized solutions to strengthen guest
             satisfaction.
-
           </p>
           <div className="flex justify-center   items-end lg:justify-start">
             <button className="bg-[#F89522] absolute top-[40em] lg:top-56  px-5 py-2 text-black rounded-xl">
