@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect, useCallback } from "react"; // Import useCallback
+import React, { useState, useEffect, useCallback } from "react"; 
 import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
@@ -57,11 +57,9 @@ const Hero = () => {
 
   const handleNext = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  }, [slides.length]); // Include slides.length in dependencies
+  }, [slides.length]); 
 
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
+
 
   const handleButtonClick = (index) => {
     setCurrentSlide(index);
@@ -69,12 +67,13 @@ const Hero = () => {
 
   useEffect(() => {
     const interval = setInterval(handleNext, 3000);
+
     return () => clearInterval(interval);
-  }, [handleNext]); // Include handleNext in the dependency array
+  }, [handleNext]); 
 
   return (
-    <div id="home" className="relative h-[100vh] lg:h-[100vh] overflow-hidden">
-      <div className="absolute p-8 inset-0">
+    <div id="home" className="relative h-[80vh]  lg:h-[100vh] mt-24 lg:mt-1  overflow-hidden">
+      <div className="absolute p-8 inset-0 ">
         <AnimatePresence>
           {slides.map(
             (slide, index) =>
@@ -85,8 +84,9 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
-                  className="h-full space-y-6 flex flex-col lg:flex-row lg:items-center"
+                  className="h-full space-y-6  flex flex-col lg:flex-row lg:items-center"
                 >
+                  {/* Image for mobile on top, for desktop next to content */}
                   {slide.imgSrc && (
                     <motion.div
                       className="lg:ml-64 lg:order-2 w-full lg:w-auto"
@@ -97,9 +97,9 @@ const Hero = () => {
                       <Image
                         src={slide.imgSrc}
                         alt="image"
-                        height={500}  
+                        height={500}
                         width={500}
-                        className="w-64 h-44  lg:mt-1 lg:w-full lg:h-[50vh] object-contain"
+                        className="w-64 h-44 lg:ml-1 ml-6  lg:mt-1 lg:w-full lg:h-[50vh] object-contain"
                       />
                     </motion.div>
                   )}
@@ -162,3 +162,7 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
