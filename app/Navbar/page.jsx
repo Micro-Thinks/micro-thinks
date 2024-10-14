@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:block bg-[#F89522] text-white px-3 py-2 rounded-3xl">
-        <button>Get Started</button>
+        <button onClick={() => scrollToSection("contact")}>Get Started</button>
       </div>
 
       <div className="md:hidden">
