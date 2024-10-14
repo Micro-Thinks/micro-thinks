@@ -6,7 +6,7 @@ const Aboutus = () => {
   return (
     <div
       id="about-us"
-      className="flex  flex-col lg:flex-row w-screen h-[832px]"
+      className="flex flex-col lg:flex-row  h-[832px] relative overflow-hidden"
     >
       {/* Image Container */}
       <div className="relative w-full lg:w-2/3">
@@ -52,23 +52,25 @@ const Aboutus = () => {
       </div>
 
       {/* About Us Text */}
-      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[2rem] px-4  lg:px-6 mt-8 lg:mt-0">
+      <div className="relative w-full lg:w-1/3 lg:top-[18rem] lg:right-[2rem] px-4 lg:px-6 mt-8 lg:mt-0">
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 0.5 }}
-          className="space-y-6 lg:space-y-12"
+          className="space-y-6 w-full lg:space-y-12 flex flex-col justify-center items-center lg:items-start"
         >
           <h1 className="font-semibold text-3xl text-[#1F2456] lg:text-left">
             About Us
           </h1>
+
           <p className="text-[#1F2456] absolute top-[30rem] lg:top-[1rem] lg:right-[12rem]  font-light text-center lg:text-left">
             At Microthinks.com, we elevate your hotel’s online visibility with
             innovative and customized solutions to strengthen guest
             satisfaction.
+
           </p>
-          <div className="flex justify-center absolute lg:top-[12rem] lg:left-[0rem] top-[36rem] left-[5rem] lg:justify-start">
+          <div className="flex justify-center lg:justify-start">
             <button className="bg-[#F89522] px-5 py-2 text-black rounded-xl">
               Learn More
             </button>

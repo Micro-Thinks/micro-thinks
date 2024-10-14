@@ -45,13 +45,13 @@ const Footer = () => {
             <h1 className="font-semibold text-xl tracking-wider">
               You want to Book?
             </h1>
-            <p className="text-sm">+92 331 61 63 916</p>
+             <Link href='https://wa.me/+923316163916' target="_blank" className="text-sm hover:text-[#F89522]  ease-in-out duration-300 ">+92 331 61 63 916</Link>
           </div>
         </div>
 
         <div className="container mx-auto flex flex-col md:flex-row justify-between mt-8">
           {/* About Us Section */}
-          <div className="flex flex-col mb-4 md:mb-0 md:w-1/4">
+          <div className="flex flex-col space-y-3 mb-4 md:mb-0 md:w-1/4">
             <h1 className="text-xl font-semibold">About Us</h1>
             <Image
               src="/Assets1.png"
@@ -82,15 +82,22 @@ const Footer = () => {
           <div className="flex flex-col mb-4 md:mb-0 md:w-1/4">
             <h3 className="text-lg font-semibold mb-2">Get in touch</h3>
             <div className="block space-y-4">
-              <Link href="mailto : info@microthinks.com  ">
+              <Link href="mailto:info@microthinks.com   " className="hover:text-[#F89522] duration-300 ease-in-out">
                 info@microthinks.com
               </Link>
               <h3 className="text-lg font-semibold mb-2">Office</h3>
-              <p>Lawrence Road, Near China Chowk, Lahore, Punjab, Pakistan.</p>
+              <Link 
+  href="https://maps.app.goo.gl/tZvbk84Xks1YcW6G6" 
+  target="_blank" 
+  className="text-sm hover:underline hover:text-[#F89522] duration-300 ease-in-out"
+>
+  Lawrence Road, Near China Chowk, Lahore, Punjab, Pakistan
+</Link>
+
               <p>Mon to Sat: 9am to 5pm</p>
             </div>
           </div>
-        </div>
+        </div> 
 
         <div className="mt-12 border-t-2 p-4">
           <div className="text-white flex items-center justify-center space-x-4">
