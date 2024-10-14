@@ -2,12 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
   --font-poppins: "Poppins", sans-serif;
   --font-questrial: "Questrial", sans-serif;
-
-  
 }
 
 @font-face {
@@ -29,8 +26,8 @@
 }
 
 body {
-  font-family: var(--font-poppins); 
-  color: var(--color-dark-navy); 
+  font-family: var(--font-poppins);
+  color: var(--color-dark-navy);
 }
 
 h1,
@@ -39,11 +36,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-questrial); 
-  color: var(--color-dark-navy); 
+  font-family: var(--font-questrial);
+  color: var(--color-dark-navy);
 }
-
-
 
 ::-webkit-scrollbar {
   display: none;
@@ -56,6 +51,9 @@ body {
   overflow-y: auto;
 }
 
-#home, #about-us, #services, #contact {
+#home,
+#about-us,
+#services,
+#contact {
   padding-top: 100px; /* Adjust based on your navbar height */
 }
