@@ -85,11 +85,11 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
-                  className="h-full  flex flex-col lg:flex-row lg:items-center"
+                  className="h-full space-y-6 flex flex-col lg:flex-row lg:items-center"
                 >
                   {slide.imgSrc && (
                     <motion.div
-                      className="lg:ml-64  lg:order-2 w-full lg:w-auto"
+                      className="lg:ml-64 lg:order-2 w-full lg:w-auto"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: 0.3, duration: 0.8 }}
@@ -97,15 +97,15 @@ const Hero = () => {
                       <Image
                         src={slide.imgSrc}
                         alt="image"
-                        height={400}
-                        width={400}
-                        className="w-56 h-40  lg:mt-1 lg:w-full xl:h-[50vh] xl:w-full lg:h-[50vh] object-contain"
+                        height={500}  
+                        width={500}
+                        className="w-64 h-44  lg:mt-1 lg:w-full lg:h-[50vh] object-contain"
                       />
                     </motion.div>
                   )}
-                  <div className="  space-y-4 lg:text-left lg:order-1 lg:ml-16">
+                  <div className="space-y-4 text-center lg:text-left lg:order-1 lg:ml-16">
                     <motion.h1
-                      className="font-extrabold tracking-wider text-3xl lg:text-5xl font-sans"
+                      className="font-extrabold tracking-wider mt-1 xl:mt-4 w-full text-3xl lg:text-5xl font-sans"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7 }}

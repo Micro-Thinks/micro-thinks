@@ -17,7 +17,7 @@ const List = () => {
           </div>
 
           {/* Blue Background Div */}
-          <div className="absolute lg:top-32 top-[70%] lg:left-96 lg:h-[80vh] h-[50vh] rounded-l-2xl w-[100%] lg:w-[70.5vw] bg-[#1F2456]">
+          <div className="absolute lg:top-32 top-[70%]  lg:left-96 lg:h-[80vh] h-[50vh] rounded-l-2xl w-[100%] lg:w-[70.5vw] bg-[#1F2456]">
             <div className="p-10">
               <h1 className="lg:text-3xl text-xl mt-8 p-6 absolute right-0 text-white tracking-widest flex items-end justify-end">
                 We list your property on OTA platforms
