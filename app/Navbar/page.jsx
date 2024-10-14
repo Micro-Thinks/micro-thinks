@@ -24,7 +24,7 @@ const Navbar = () => {
   const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
 
   return (
-    <div className="fixed top-0 w-full bg-white z-50 flex items-center  justify-between p-6 border-b-[2] border-b-gray-600 shadow-lg">
+    <div className="fixed top-0 w-full bg-white z-50 flex items-center  justify-between  border-b-[2] border-b-gray-600 shadow-lg">
       {/* Logo Section */}
       <div className="logo cursor-pointer">
         <Image
