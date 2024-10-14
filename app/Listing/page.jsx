@@ -24,7 +24,7 @@ const List = () => {
               </h1>
 
               {/* Icon Grid */}
-              <div className="grid grid-cols-3 lg:grid-cols-3 gap-10 p-2 items-center justify-center lg:gap-12 text-3xl absolute lg:top-40 lg:left-[28rem] top-44 z-40 text-white">
+              <div className="grid grid-cols-3 lg:grid-cols-3 gap-10 p-2 mr-10 lg:mr-1 items-center justify-center lg:gap-12 text-3xl absolute lg:top-40 lg:left-[28rem] top-44 z-40 text-white">
                 <Image src="/Tripadvisor.webp" alt="image" height={100} width={100} />
                 <Image src="/Airbnb.webp" alt="image" height={100} width={100} />
                 <Image src="/Agonda.webp" alt="image" height={100} width={100} />

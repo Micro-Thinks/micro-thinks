@@ -6,7 +6,7 @@ const Aboutus = () => {
   return (
     <div
       id="about-us"
-      className="flex flex-col lg:flex-row  h-[832px] relative overflow-hidden"
+      className="flex flex-col lg:flex-row  h-[832px] sm:-mt-[15rem]  lg:-mt-0 relative overflow-hidden"
     >
       {/* Image Container */}
       <div className="relative w-full lg:w-2/3">
@@ -70,8 +70,8 @@ const Aboutus = () => {
             satisfaction.
 
           </p>
-          <div className="flex justify-center lg:justify-start">
-            <button className="bg-[#F89522] px-5 py-2 text-black rounded-xl">
+          <div className="flex justify-center   items-end lg:justify-start">
+            <button className="bg-[#F89522] absolute top-[40em] lg:top-56  px-5 py-2 text-black rounded-xl">
               Learn More
             </button>
           </div>
