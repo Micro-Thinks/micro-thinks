@@ -1,8 +1,8 @@
 "use client";
-import { motion } from 'framer-motion'; 
-import { useEffect, useRef } from 'react';
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
-const Sidebar = ({ navbar, closeSidebar , scrollToSection }) => {
+const Sidebar = ({ navbar = [], closeSidebar, scrollToSection }) => {
   const sidebarRef = useRef(null);
 
   useEffect(() => {
@@ -12,31 +12,32 @@ const Sidebar = ({ navbar, closeSidebar , scrollToSection }) => {
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [closeSidebar]);
 
   return (
     <motion.div
-    ref={sidebarRef}
-      initial={{ x: '-100%' }}  // Start from the left (off-screen)
-      animate={{ x: 0 }}        // Animate to 0 (rest at the left side)
-      exit={{ x: '-100%' }}      // Exit animation to the left
-      transition={{ type: 'tween', duration: 0.5 }}
+      ref={sidebarRef}
+      initial={{ x: "-100%" }}
+      animate={{ x: 0 }}
+      exit={{ x: "-100%" }}
+      transition={{ type: "tween", duration: 0.5 }}
       className="fixed inset-0 h-3/4 w-3/4 top-32 bg-[#1F2456] z-50 flex flex-col space-y-6 text-white p-8"
     >
       <div className="flex justify-end">
         <button onClick={closeSidebar} className="text-2xl">
-          ✕ {/* Close Icon */}
+          ✕
         </button>
       </div>
-      
-      {navbar.map((nav, index) => (
+
+      {Array.isArray(navbar) &&
+        navbar.map((nav, index) => (
           <button
             key={index}
-            onClick={() => scrollToSection(nav.sectionId)} 
+            onClick={() => scrollToSection(nav.sectionId)}
             className="text-md hover:text-[#F89522] ease-in-out duration-300"
           >
             {nav.name}
