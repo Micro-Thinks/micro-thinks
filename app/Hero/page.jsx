@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react"; // Import useEffect
+import React, { useState, useEffect, useCallback } from "react"; // Import useCallback
 import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
@@ -8,7 +8,7 @@ const Hero = () => {
 
   const slides = [
     {
-      imgSrc: "/Home.webp",
+      imgSrc: "/images/Home.webp",
       title: (
         <>
           <span className="text-[#1F2456] font-extrabold">Your Brand, </span>
@@ -22,7 +22,7 @@ const Hero = () => {
         "At our hospitality marketing company, we believe that the journey to ultimate success begins with a strong collaboration. Your hotel’s unique identity and vision are at the forefront of our strategic approach.",
     },
     {
-      imgSrc: "/googleads.webp",
+      imgSrc: "/images/googleads.webp",
       title: (
         <>
           <span className="text-[#1F2456] font-extrabold">Google Ads </span>
@@ -33,18 +33,17 @@ const Hero = () => {
         "We specialize in managing Google Ads campaigns for hotels, driving targeted traffic and increasing direct bookings. Our tailored strategies maximize ROI and enhance visibility across search and display networks.",
     },
     {
-      imgSrc: "/OTA.webp",
+      imgSrc: "/images/OTA.webp",
       title: (
         <>
           <span className="text-[#1F2456] font-extrabold">OTA Listing </span>
           <span className="text-[#F89522]">Management</span>
         </>
       ),
-      description: `"Maximize your hotel’s engagement and booking with our expert Google ads management services. Let us help you drive maximum traffic to your website through our unique Google Ads strategy
-"`,
+      description: "Maximize your hotel’s engagement and booking with our expert Google ads management services. Let us help you drive maximum traffic to your website through our unique Google Ads strategy",
     },
     {
-      imgSrc: "/webdesign.webp",
+      imgSrc: "/images/webdesign.webp",
       title: (
         <>
           <span className="text-[#1F2456] font-extrabold">Custom Web </span>
@@ -56,9 +55,9 @@ const Hero = () => {
     },
   ];
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
+  }, [slides.length]); // Include slides.length in dependencies
 
   const handlePrev = () => {
     setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -70,9 +69,8 @@ const Hero = () => {
 
   useEffect(() => {
     const interval = setInterval(handleNext, 3000);
-
     return () => clearInterval(interval);
-  }, [currentSlide]);
+  }, [handleNext]); // Include handleNext in the dependency array
 
   return (
     <div id="home" className="relative h-[100vh] lg:h-[100vh] overflow-hidden">
@@ -89,7 +87,6 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                   className="h-full space-y-6 flex flex-col lg:flex-row lg:items-center"
                 >
-                  {/* Image for mobile on top, for desktop next to content */}
                   {slide.imgSrc && (
                     <motion.div
                       className="lg:ml-64 lg:order-2 w-full lg:w-auto"
@@ -102,7 +99,7 @@ const Hero = () => {
                         alt="image"
                         height={500}
                         width={500}
-                        className=" w-64 h-44 mt-[4.4rem] lg:mt-1 lg:w-full lg:h-auto object-contain"
+                        className="w-64 h-44 mt-[4.4rem] lg:mt-1 lg:w-full lg:h-auto object-contain"
                       />
                     </motion.div>
                   )}
@@ -124,7 +121,7 @@ const Hero = () => {
                       {slide.description}
                     </motion.p>
                     <button className="bg-[#F89522] px-5 py-2 rounded-3xl">
-                      Let's Start
+                      Let&lsquo;s Start
                     </button>
                   </div>
                 </motion.div>
