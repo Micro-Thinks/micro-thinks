@@ -31,8 +31,8 @@ const Footer = () => {
           </div>
 
           {/* Need Help Section */}
-          <div className="py-4 px-12 space-y-3 md:w-1/3">
-            <h1 className="font-semibold text-2xl tracking-wider">
+          <div className=" space-y-6 md:w-1/3">
+            <h1 className="font-semibold flex items-start justify-start text-2xl tracking-wider">
               Need Help?
             </h1>
             <p className="text-sm">
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           {/* Booking Section */}
-          <div className="py-4 px-24 space-y-3 md:w-1/3">
+          <div className=" space-y-3 mt-2 lg:mt-0 md:w-1/3">
             <h1 className="font-semibold text-xl tracking-wider">
               You want to Book?
             </h1>
