@@ -8,7 +8,7 @@ const List = () => {
           {/* Image Container */}
           <div className="w-auto sm:w-[50%]">
             <Image
-              src="/Listservice.png"
+              src="/images/Listservice.png"
               alt="listservice"
               className="relative rounded-r-3xl z-10 object-cover  h-[100%]  lg:h-full"
               height={800}
@@ -25,12 +25,42 @@ const List = () => {
 
               {/* Icon Grid */}
               <div className="grid grid-cols-3 lg:grid-cols-3 gap-10 p-2 mr-10 lg:mr-1 items-center justify-center lg:gap-12 text-3xl absolute lg:top-40 lg:left-[28rem] top-44 z-40 text-white">
-                <Image src="/Tripadvisor.webp" alt="image" height={100} width={100} />
-                <Image src="/Airbnb.webp" alt="image" height={100} width={100} />
-                <Image src="/Agonda.webp" alt="image" height={100} width={100} />
-                <Image src="/Expedia.webp" alt="image" height={100} width={100} />
-                <Image src="/skyscanner.webp" alt="image" height={100} width={100} />
-                <Image src="/trivago-logo-vector.webp" alt="image" height={100} width={100} />
+                <Image
+                  src="/images/Tripadvisor.webp"
+                  alt="image"
+                  height={100}
+                  width={100}
+                />
+                <Image
+                  src="/images/Airbnb.webp"
+                  alt="image"
+                  height={100}
+                  width={100}
+                />
+                <Image
+                  src="/images/Agonda.webp"
+                  alt="image"
+                  height={100}
+                  width={100}
+                />
+                <Image
+                  src="/images/Expedia.webp"
+                  alt="image"
+                  height={100}
+                  width={100}
+                />
+                <Image
+                  src="/images/skyscanner.webp"
+                  alt="image"
+                  height={100}
+                  width={100}
+                />
+                <Image
+                  src="/images/trivago-logo-vector.webp"
+                  alt="image"
+                  height={100}
+                  width={100}
+                />
               </div>
             </div>
           </div>

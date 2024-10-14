@@ -40,7 +40,7 @@ const Hero = () => {
           <span className="text-[#F89522]">Management</span>
         </>
       ),
-      description: "Maximize your hotel’s engagement and booking with our expert Google ads management services. Let us help you drive maximum traffic to your website through our unique Google Ads strategy",
+      description: `"Maximize your hotel’s engagement and booking with our expert Google ads management services. Let us help you drive maximum traffic to your website through our unique Google Ads strategy"`,
     },
     {
       imgSrc: "/images/webdesign.webp",
