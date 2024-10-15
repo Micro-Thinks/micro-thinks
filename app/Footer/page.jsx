@@ -29,7 +29,7 @@ const Footer = () => {
             <h1 className="font-semibold flex items-start justify-start text-2xl tracking-wider">
               Need Help?
             </h1>
-            <p className="text-sm">
+            <p className="text-sm ">
               Manage Booking <br /> Support
             </p>
           </div>
