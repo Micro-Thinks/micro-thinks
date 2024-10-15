@@ -25,7 +25,6 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 w-full bg-white z-50 flex items-center p-6 justify-between  border-b-[2] border-b-gray-600 shadow-lg">
-      {/* Toggle Button (Top Left) */}
       <div className="md:hidden">
         <button onClick={toggleSidebar} className="text-2xl">
           ☰
