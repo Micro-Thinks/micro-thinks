@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react"; // Import useCallback
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -11,9 +11,9 @@ const MobileView = () => {
       imgSrc: "/images/Home.webp",
       title: (
         <>
-          <span className="text-[#1F2456] font-extrabold">Your Brand, </span>
+          <span className="text-[#1F2456] font-bold">Your Brand, </span>
           <span className="text-[#808EAB]">Our Strategy, </span> <br />
-          <span className="text-[#F89522] font-extrabold  block">
+          <span className="text-[#F89522] font-bold  block">
             Ultimate Growth
           </span>
         </>
@@ -124,7 +124,7 @@ const MobileView = () => {
                       >
                         {slide.description}
                       </motion.p>
-                      <button className="bg-[#F89522] px-5 py-2 rounded-full text-white w-full lg:w-auto">
+                      <button className="bg-[#F89522] px-5 py-2 bottom-0 rounded-full text-white w-full lg:w-auto">
                         Let&apos;s Start
                       </button>
                     </div>
