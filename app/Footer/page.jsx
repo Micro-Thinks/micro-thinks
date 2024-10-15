@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
-
   return (
     <div id="contact" className="">
       <footer className="bg-[#1F2456] text-white p-10">
@@ -26,7 +25,7 @@ const Footer = () => {
           </div>
 
           {/* Need Help Section */}
-          <div className=" space-y-6 md:w-1/3">
+          <div className=" space-y-6 md:w-1/3 lg:pl-14 mt-6 ">
             <h1 className="font-semibold flex items-start justify-start text-2xl tracking-wider">
               Need Help?
             </h1>
@@ -36,7 +35,7 @@ const Footer = () => {
           </div>
 
           {/* Booking Section */}
-          <div className=" space-y-3 mt-2 lg:mt-0 md:w-1/3">
+          <div className=" space-y-3 mt-2 md:w-1/3 lg:pl-28 lg:mt-6">
             <h1 className="font-semibold text-xl tracking-wider">
               You want to Book?
             </h1>
@@ -53,13 +52,15 @@ const Footer = () => {
         <div className="container mx-auto flex flex-col md:flex-row justify-between mt-8">
           {/* About Us Section */}
           <div className="flex flex-col space-y-3 mb-4 md:mb-0 md:w-1/4">
-            <h1 className="text-xl font-semibold">About Us</h1>
-            <Image
-              src="/images/Assets1.png"
-              height={100}
-              width={100}
-              alt="microthinks-logo"
-            />
+            <h1 className="text-xl font-semibold ">About Us</h1>
+            <div className="flex lg:justify-start justify-center">
+              <Image
+                src="/images/Assets1.png"
+                height={100}
+                width={100}
+                alt="microthinks-logo"
+              />
+            </div>
             <p className="w-64">
               MicroThinks drives hotel growth with tailored digital solutions
               and expert support to maximize your online presence and revenue.
@@ -145,17 +146,16 @@ const Footer = () => {
             <p className=" flex items-center  text-white justify-center ">
               Available 24/7.
               <button
-  className="underline"
-  onClick={() =>
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", 
-    })
-  }
->
-  Back to the top
-</button>
-
+                className="underline"
+                onClick={() =>
+                  window.scrollTo({
+                    top: 0,
+                    behavior: "smooth",
+                  })
+                }
+              >
+                Back to the top
+              </button>
             </p>
           </div>
         </div>
