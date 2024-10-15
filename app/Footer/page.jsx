@@ -1,14 +1,9 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect } from "react";
 
 const Footer = () => {
-  useEffect(() => {
-    const up = () => {
-      window.scrollTo(0, 0);
-    };
-  }, []);
+
   return (
     <div id="contact" className="">
       <footer className="bg-[#1F2456] text-white p-10">
@@ -150,11 +145,17 @@ const Footer = () => {
             <p className=" flex items-center  text-white justify-center ">
               Available 24/7.
               <button
-                className=" underline"
-                onClick={() => window.scrollTo(0, 0)}
-              >
-                Back to the top
-              </button>
+  className="underline"
+  onClick={() =>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    })
+  }
+>
+  Back to the top
+</button>
+
             </p>
           </div>
         </div>

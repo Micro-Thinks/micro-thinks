@@ -6,7 +6,7 @@ const Aboutus = () => {
   return (
     <div
       id="about-us"
-      className="flex flex-col lg:flex-row  h-[832px] sm:-mt-[15rem]  lg:-mt-0 relative overflow-hidden"
+      className="flex flex-col lg:flex-row  h-[832px] -mt-[7rem]   lg:-mt-0 relative overflow-hidden"
     >
       {/* Image Container */}
       <div className="relative w-full lg:w-2/3">
