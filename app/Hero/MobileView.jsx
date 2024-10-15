@@ -7,7 +7,7 @@ const { Fragment } = require("react");
 const MobileView = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-   {
+    {
       imgSrc: "/images/Home.webp",
       title: (
         <>
@@ -66,7 +66,10 @@ const MobileView = () => {
 
   return (
     <Fragment>
-      <div id="home" className="relative block lg:hidden h-screen overflow-hidden">
+      <div
+        id="home"
+        className="relative block lg:hidden h-screen overflow-hidden -mt-16"
+      >
         <div className="absolute h-screen -mt-10 p-4">
           <AnimatePresence>
             {slides.map((slide, index) =>
@@ -79,7 +82,9 @@ const MobileView = () => {
                   transition={{ duration: 0.5 }}
                   className="h-full flex flex-col justify-between"
                 >
-                  <div className="space-y-4 h-full min-h-[400px]"> {/* Set a min-height */}
+                  <div className="space-y-4 h-full min-h-[400px]">
+                    {" "}
+                    {/* Set a min-height */}
                     <motion.h1
                       className="font-bold tracking-wider text-2xl font-sans"
                       initial={{ opacity: 0, y: 20 }}
@@ -88,11 +93,10 @@ const MobileView = () => {
                     >
                       {slide.title}
                     </motion.h1>
-
                     <div className="container space-y-4">
                       {slide.imgSrc && (
                         <motion.div
-                          className="w-full h-40 flex justify-center items-center" // Set a fixed height for the image container
+                          className="w-full h-64 flex justify-center items-center" // Set a fixed height for the image container
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.3, duration: 0.8 }}
@@ -100,9 +104,9 @@ const MobileView = () => {
                           <Image
                             src={slide.imgSrc}
                             alt="image"
-                            height={160} // Set a consistent height for the image
-                            width={160}  // Adjust this according to your layout
-                            className="object-contain"
+                            height={160}
+                            width={160}
+                            className="object-contain w-72 h-auto"
                           />
                         </motion.div>
                       )}
@@ -115,7 +119,6 @@ const MobileView = () => {
                         {slide.description}
                       </motion.p>
                     </div>
-
                     <div className="flex items-end">
                       <button className="bg-[#F89522] px-5 py-2 rounded-full text-white w-full">
                         Let&apos;s Start
