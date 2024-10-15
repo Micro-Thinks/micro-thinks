@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect, useCallback } from "react"; 
+import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MobileView from "./MobileView";
 
@@ -58,9 +58,7 @@ const Hero = () => {
 
   const handleNext = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  }, [slides.length]); 
-
-
+  }, [slides.length]);
 
   const handleButtonClick = (index) => {
     setCurrentSlide(index);
@@ -70,10 +68,9 @@ const Hero = () => {
     const interval = setInterval(handleNext, 3000);
 
     return () => clearInterval(interval);
-  }, [handleNext]); 
+  }, [handleNext]);
 
   return (
-
     <div id="home" className="relative h-[100vh] lg:h-[100vh] overflow-hidden">
       <div className="absolute hidden lg:block p-8 inset-0">
         <AnimatePresence>
@@ -167,7 +164,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
-
-
-
