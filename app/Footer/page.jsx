@@ -16,7 +16,7 @@ const Footer = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email*"
-                className="rounded-lg p-3 w-full md:w-auto"
+                className="rounded-lg p-3 w-full md:w-auto focus:outline-none text-black"
               />
               <button className="bg-[#F89522] px-6 py-2 rounded-lg">
                 Submit
@@ -34,13 +34,12 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Booking Section */}
-          <div className=" space-y-3 mt-6 text-center md:w-1/3 lg:pl-28 lg:mt-6">
+          <div className=" space-y-3 mt-6 text-center  md:w-2/6  lg:mt-6">
             <h1 className=" text-xl tracking-wider">You want to Book?</h1>
             <Link
               href="https://wa.me/+923316163916"
               target="_blank"
-              className="text-sm hover:text-[#F89522]  ease-in-out duration-300 "
+              className="text-sm hover:text-[#F89522]   lg:-ml-12 ease-in-out duration-300 "
             >
               +92 331 61 63 916
             </Link>
@@ -48,7 +47,6 @@ const Footer = () => {
         </div>
 
         <div className="container mx-auto flex flex-col md:flex-row justify-between mt-8">
-          {/* About Us Section */}
           <div className="flex flex-col space-y-3 mb-4 md:mb-0 md:w-1/4">
             <h1 className="text-xl font-semibold ">About Us</h1>
             <div className="flex lg:justify-start justify-center">
@@ -57,10 +55,10 @@ const Footer = () => {
                 height={100}
                 width={100}
                 alt="microthinks-logo"
-                className="w-52 h-auto"
+                className="w-48 h-auto"
               />
             </div>
-            <p className="w-64">
+            <p className="w-80 flex items">
               MicroThinks drives hotel growth with tailored digital solutions
               and expert support to maximize your online presence and revenue.
             </p>

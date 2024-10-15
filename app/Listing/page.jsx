@@ -3,7 +3,7 @@ import Image from "next/image";
 const List = () => {
   return (
     <div id="OTA">
-      <div className="lg:mt-[16%] mt-[10%]">
+      <div className="">
         <div className="relative flex">
           {/* Image Container */}
           <div className="w-auto sm:w-[50%]">
