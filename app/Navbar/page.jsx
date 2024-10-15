@@ -25,8 +25,25 @@ const Navbar = () => {
 
   return (
     <div className="fixed top-0 w-full bg-white z-50 flex items-center p-6 justify-between  border-b-[2] border-b-gray-600 shadow-lg">
+      {/* Toggle Button (Top Left) */}
+      <div className="md:hidden">
+        <button onClick={toggleSidebar} className="text-2xl">
+          ☰
+        </button>
+      </div>
       {/* Logo Section */}
-      <div className="logo cursor-pointer">
+      {/*Logo for dsektop  */}
+      <div className="logo cursor-pointer hidden md:block">
+        <Image
+          onClick={() => scrollToSection("home")}
+          src="/images/microthinks-logo.webp"
+          alt="microthinks-logo"
+          width={100}
+          height={100}
+        />
+      </div>
+      {/* Logo for mobile */}
+      <div className="logo cursor-pointer block lg:hidden absolute left-32">
         <Image
           onClick={() => scrollToSection("home")}
           src="/images/microthinks-logo.webp"
@@ -51,10 +68,6 @@ const Navbar = () => {
 
       <div className="hidden md:block bg-[#F89522] text-white px-3 py-2 rounded-3xl">
         <button onClick={() => scrollToSection("contact")}>Get Started</button>
-      </div>
-
-      <div className="md:hidden">
-        <button onClick={toggleSidebar}>☰</button>
       </div>
 
       {isSidebarOpen && (

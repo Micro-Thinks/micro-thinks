@@ -78,7 +78,7 @@ const MobileView = () => {
         id="home"
         className="relative block lg:hidden h-screen overflow-hidden"
       >
-        <div className="absolute inset-0 p-4 lg:p-8">
+        <div className="absolute inset-0 p-4">
           <AnimatePresence>
             {slides.map(
               (slide, index) =>
