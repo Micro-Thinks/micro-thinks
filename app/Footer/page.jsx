@@ -27,10 +27,10 @@ const Footer = () => {
 
           {/* Need Help Section */}
           <div className=" space-y-6 md:w-1/3">
-            <h1 className="font-semibold flex items-start justify-start text-2xl tracking-wider">
+            <h1 className="font-semibold    text-2xl tracking-wider">
               Need Help?
             </h1>
-            <p className="text-sm">
+            <p className="text-sm ">
               Manage Booking <br /> Support
             </p>
           </div>
