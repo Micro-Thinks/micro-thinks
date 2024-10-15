@@ -74,7 +74,10 @@ const MobileView = () => {
 
   return (
     <Fragment>
-      <div id="home" className="relative h-screen overflow-hidden">
+      <div
+        id="home"
+        className="relative block lg:hidden h-screen overflow-hidden"
+      >
         <div className="absolute inset-0 p-4 lg:p-8">
           <AnimatePresence>
             {slides.map(
@@ -122,7 +125,7 @@ const MobileView = () => {
                         {slide.description}
                       </motion.p>
                       <button className="bg-[#F89522] px-5 py-2 rounded-full text-white w-full lg:w-auto">
-                        Let's Start
+                        Let&apos;s Start
                       </button>
                     </div>
                   </motion.div>
