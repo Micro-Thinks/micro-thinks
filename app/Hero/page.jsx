@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React, { useState, useEffect, useCallback } from "react"; 
 import { motion, AnimatePresence } from "framer-motion";
+import MobileView from "./MobileView";
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -72,8 +73,9 @@ const Hero = () => {
   }, [handleNext]); 
 
   return (
-    <div id="home" className="relative h-[80vh]  lg:h-[100vh] mt-24 lg:mt-1  overflow-hidden">
-      <div className="absolute p-8 inset-0 ">
+
+    <div id="home" className="relative h-[100vh] lg:h-[100vh] overflow-hidden">
+      <div className="absolute hidden lg:block p-8 inset-0">
         <AnimatePresence>
           {slides.map(
             (slide, index) =>
@@ -129,6 +131,9 @@ const Hero = () => {
           )}
         </AnimatePresence>
       </div>
+
+      {/* Mobile view slider */}
+      <MobileView />
 
       {/* Button Container for large screens */}
       <div className="hidden lg:flex w-full absolute bottom-0 justify-center">
