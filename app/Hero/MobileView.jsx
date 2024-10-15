@@ -7,7 +7,7 @@ const { Fragment } = require("react");
 const MobileView = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    {
+   {
       imgSrc: "/images/Home.webp",
       title: (
         <>
@@ -57,15 +57,7 @@ const MobileView = () => {
 
   const handleNext = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  }, [slides.length]); // Include slides.length in dependencies
-
-  const handlePrev = () => {
-    setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
-  const handleButtonClick = (index) => {
-    setCurrentSlide(index);
-  };
+  }, [slides.length]);
 
   useEffect(() => {
     const interval = setInterval(handleNext, 3000);
@@ -74,35 +66,33 @@ const MobileView = () => {
 
   return (
     <Fragment>
-      <div
-        id="home"
-        className="relative block lg:hidden h-screen overflow-hidden"
-      >
-        <div className="absolute inset-0 p-4">
+      <div id="home" className="relative block lg:hidden h-screen overflow-hidden">
+        <div className="absolute h-screen -mt-10 p-4">
           <AnimatePresence>
-            {slides.map(
-              (slide, index) =>
-                currentSlide === index && (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: 50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -50 }}
-                    transition={{ duration: 0.5 }}
-                    className="h-full flex flex-col lg:flex-row lg:items-center"
-                  >
-                    <div className="space-y-4 lg:text-left lg:order-1 lg:ml-16">
-                      <motion.h1
-                        className="font-bold tracking-wider text-3xl lg:text-5xl font-sans"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.7 }}
-                      >
-                        {slide.title}
-                      </motion.h1>
+            {slides.map((slide, index) =>
+              currentSlide === index ? (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -50 }}
+                  transition={{ duration: 0.5 }}
+                  className="h-full flex flex-col justify-between"
+                >
+                  <div className="space-y-4 h-full min-h-[400px]"> {/* Set a min-height */}
+                    <motion.h1
+                      className="font-bold tracking-wider text-2xl font-sans"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.7 }}
+                    >
+                      {slide.title}
+                    </motion.h1>
+
+                    <div className="container space-y-4">
                       {slide.imgSrc && (
                         <motion.div
-                          className="mt-4 lg:mt-0 lg:ml-64 lg:order-2 w-full lg:w-auto"
+                          className="w-full h-40 flex justify-center items-center" // Set a fixed height for the image container
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           transition={{ delay: 0.3, duration: 0.8 }}
@@ -110,26 +100,30 @@ const MobileView = () => {
                           <Image
                             src={slide.imgSrc}
                             alt="image"
-                            height={400}
-                            width={400}
-                            className="w-full h-auto lg:w-full xl:h-[50vh] xl:w-full lg:h-[50vh] object-contain"
+                            height={160} // Set a consistent height for the image
+                            width={160}  // Adjust this according to your layout
+                            className="object-contain"
                           />
                         </motion.div>
                       )}
                       <motion.p
-                        className="text-[#1F2456] text-sm lg:text-md w-full lg:w-96"
+                        className="text-[#1F2456] text-sm w-full"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2, duration: 0.7 }}
                       >
                         {slide.description}
                       </motion.p>
-                      <button className="bg-[#F89522] px-5 py-2 bottom-0 rounded-full text-white w-full lg:w-auto">
+                    </div>
+
+                    <div className="flex items-end">
+                      <button className="bg-[#F89522] px-5 py-2 rounded-full text-white w-full">
                         Let&apos;s Start
                       </button>
                     </div>
-                  </motion.div>
-                )
+                  </div>
+                </motion.div>
+              ) : null
             )}
           </AnimatePresence>
         </div>

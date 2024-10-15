@@ -71,7 +71,7 @@ const Hero = () => {
   }, [handleNext]);
 
   return (
-    <div id="home" className="relative h-[100vh] lg:h-[100vh] overflow-hidden">
+    <div id="home" className="relative h-[100vh]  overflow-hidden">
       <div className="absolute hidden lg:block p-8 inset-0">
         <AnimatePresence>
           {slides.map(
@@ -83,7 +83,7 @@ const Hero = () => {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
-                  className="h-full space-y-6  flex flex-col lg:flex-row lg:items-center"
+                  className="h-full space-y-6  flex flex-row items-center"
                 >
                   {/* Image for mobile on top, for desktop next to content */}
                   {slide.imgSrc && (
@@ -98,13 +98,13 @@ const Hero = () => {
                         alt="image"
                         height={500}
                         width={500}
-                        className="w-64 h-44 lg:ml-1 ml-6  lg:mt-1 lg:w-full lg:h-[50vh] object-contain"
+                        className="ml-1 mt-1 w-full h-[50vh] object-contain"
                       />
                     </motion.div>
                   )}
-                  <div className="space-y-4 text-center lg:text-left lg:order-1 lg:ml-16">
+                  <div className="space-y-4 text-left lg:order-1 lg:ml-16">
                     <motion.h1
-                      className="font-extrabold tracking-wider mt-1 xl:mt-4 w-full text-3xl lg:text-5xl font-sans"
+                      className="font-extrabold tracking-wider mt-1 xl:mt-4 w-full  text-5xl font-sans"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7 }}
@@ -112,7 +112,7 @@ const Hero = () => {
                       {slide.title}
                     </motion.h1>
                     <motion.p
-                      className="text-[#1F2456] text-md w-full lg:w-96"
+                      className="text-[#1F2456] text-md w-96"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.2, duration: 0.7 }}
