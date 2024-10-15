@@ -35,10 +35,8 @@ const Footer = () => {
           </div>
 
           {/* Booking Section */}
-          <div className=" space-y-3 mt-2 md:w-1/3 lg:pl-28 lg:mt-6">
-            <h1 className="font-semibold text-xl tracking-wider">
-              You want to Book?
-            </h1>
+          <div className=" space-y-3 mt-6 text-center md:w-1/3 lg:pl-28 lg:mt-6">
+            <h1 className=" text-xl tracking-wider">You want to Book?</h1>
             <Link
               href="https://wa.me/+923316163916"
               target="_blank"
@@ -59,6 +57,7 @@ const Footer = () => {
                 height={100}
                 width={100}
                 alt="microthinks-logo"
+                className="w-52 h-auto"
               />
             </div>
             <p className="w-64">
