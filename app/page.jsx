@@ -4,6 +4,7 @@ import Navbar from "./Navbar/page";
 import Aboutus from "./Aboutus/page";
 import Services from "./Services/page";
 import List from "./Listing/page";
+import ContactForm from "./Contact/page";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Aboutus />
       <List />
       <Services />
+      <ContactForm />
       <Footer />
     </div>
   );
