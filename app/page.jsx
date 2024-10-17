@@ -4,7 +4,9 @@ import Navbar from "./Navbar/page";
 import Aboutus from "./Aboutus/page";
 import Services from "./Services/page";
 import List from "./Listing/page";
+import ContactForm from "./Contact/page";
 import WhatsAppButton from "./WhatsApp/WhatsAppButton";
+
 
 const Home = () => {
   return (
@@ -14,6 +16,7 @@ const Home = () => {
       <Aboutus />
       <List />
       <Services />
+      <ContactForm />
       <Footer />
       <WhatsAppButton />
     </div>
