@@ -5,6 +5,8 @@ import Aboutus from "./Aboutus/page";
 import Services from "./Services/page";
 import List from "./Listing/page";
 import ContactForm from "./Contact/page";
+import WhatsAppButton from "./WhatsApp/WhatsAppButton";
+
 
 const Home = () => {
   return (
@@ -16,6 +18,7 @@ const Home = () => {
       <Services />
       <ContactForm />
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
