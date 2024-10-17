@@ -3,8 +3,10 @@ import Image from "next/image";
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import MobileView from "./MobileView";
+import Link from "next/link";
 
-const Hero = () => {
+const Hero = ({slidetoContactForm}) => {
+  
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -119,9 +121,12 @@ const Hero = () => {
                     >
                       {slide.description}
                     </motion.p>
-                    <button className="bg-[#F89522] px-5 py-2 rounded-3xl">
-                      Let&lsquo;s Start
-                    </button>
+                    <Link href="#contact-form" > {/* Make sure to add scroll={false} */}
+  <button onClick={slidetoContactForm} className="bg-[#F89522] px-5 py-2 rounded-3xl">
+    Let&lsquo;s Start
+  </button>
+</Link>
+
                   </div>
                 </motion.div>
               )
@@ -130,7 +135,7 @@ const Hero = () => {
       </div>
 
       {/* Mobile view slider */}
-      <MobileView />
+      <MobileView slidetoContactForm={slidetoContactForm} />
 
       {/* Button Container for large screens */}
       <div className="hidden lg:flex w-full absolute bottom-0 justify-center">

@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const { Fragment } = require("react");
 
-const MobileView = () => {
+const MobileView = ({slidetoContactForm}) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -120,9 +121,11 @@ const MobileView = () => {
                       </motion.p>
                     </div>
                     <div className="flex items-end">
-                      <button className="bg-[#F89522] px-5 py-2 rounded-full text-white w-full">
-                        Let&apos;s Start
-                      </button>
+                    <Link href="#contact-form" > {/* Make sure to add scroll={false} */}
+  <button onClick={slidetoContactForm} className="bg-[#F89522] px-5 py-2 rounded-3xl">
+    Let&lsquo;s Start
+  </button>
+</Link>
                     </div>
                   </div>
                 </motion.div>

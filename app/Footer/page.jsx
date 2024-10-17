@@ -37,7 +37,7 @@ const Footer = () => {
           <div className=" space-y-3 mt-6 text-center  md:w-2/6  lg:mt-6">
             <h1 className=" text-xl tracking-wider">You want to Book?</h1>
             <Link
-              href="https://wa.me/+923316163916"
+              href="tel:+923316163916"
               target="_blank"
               className="text-sm hover:text-[#F89522]   lg:-ml-12 ease-in-out duration-300 "
             >
