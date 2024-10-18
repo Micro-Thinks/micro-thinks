@@ -8,6 +8,8 @@ import List from "./Listing/page";
 import ContactForm from "./Contact/page";
 import WhatsAppButton from "./WhatsApp/WhatsAppButton";
 import { useRef } from "react";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const Home = () => {
@@ -25,6 +27,10 @@ const Home = () => {
       <ContactForm  ref={contactFormRef} />
       <Footer />
       <WhatsAppButton />
+      <ToastContainer
+  position="top-right"
+  autoClose={4000}/>
+
     </div>
   );
 };
