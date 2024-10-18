@@ -37,11 +37,11 @@ const Footer = () => {
           <div className=" space-y-3 mt-6 text-center  md:w-2/6  lg:mt-6">
             <h1 className=" text-xl tracking-wider">You want to Book?</h1>
             <Link
-              href="tel:+923316163916"
+              href="tel: +923064312116"
               target="_blank"
               className="text-sm hover:text-[#F89522]   lg:-ml-12 ease-in-out duration-300 "
             >
-              +92 331 61 63 916
+              +92 306 4312116
             </Link>
           </div>
         </div>
@@ -68,12 +68,24 @@ const Footer = () => {
           <div className="flex flex-col mb-4 md:mb-0 md:w-1/4">
             <h3 className="text-lg font-semibold mb-2">Services</h3>
             <ul className="block space-y-2">
-              <li>Website Development</li>
-              <li>Google Ads Campaigns</li>
-              <li>Property Management System</li>
-              <li>Revenue Management System</li>
-              <li>OTA Listing Management</li>
-              <li>Social Media Marketing</li>
+              <Link  href='#home' scroll={true}>
+              <li className="hover:underline ">Website Development</li>
+              </Link>
+              <Link  href='#home' scroll={true}>
+              <li className="hover:underline ">Google Ads Campaigns</li>
+              </Link>
+<Link   href='#home' scroll={true}>
+              <li className="hover:underline ">Property Management System</li>
+</Link>
+<Link  href='#home' scroll={true}>
+              <li className="hover:underline ">  Revenue Management System</li>
+</Link>
+<Link  href='#home' scroll={true}>
+              <li className="hover:underline ">OTA Listing Management</li>
+</Link>
+              <Link href='#home' scroll={true}>
+              <li className="hover:underline ">Social Media Marketing</li>
+              </Link>
             </ul>
           </div>
 
@@ -124,11 +136,11 @@ const Footer = () => {
             </ul>
           </div>
           <div className=" mt-10">
-            <span className="text-white text-sm  lg:text-xl xl:text-xl flex items-center ">
+            <span className="text-white text-sm  lg:text-xl xl:text-xl flex items-center justify-center ">
               Copyright © MicroThinks 2024 All rights reserved
             </span>
             <p className=" flex items-center text-center mt-6">
-              *At Microthinks.com, we are deeply passionate about enhancing your
+              At Microthinks.com, we are deeply passionate about enhancing your
               hotel’s digital presence and revenue through our hotel marketing
               services. Our skilled team empowers hotel owners with modern
               digital solutions that streamline operations and enrich guest

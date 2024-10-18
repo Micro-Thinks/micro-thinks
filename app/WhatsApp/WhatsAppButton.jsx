@@ -22,7 +22,7 @@ const WhatsAppButton = () => {
         {visible &&
         (
 
-            <Link href='https://wa.me/+923316163916' target='_blank' > 
+            <Link href='https://wa.me/+923064312116' target='_blank' > 
         <FaWhatsapp className=" h-12 w-12 lg:h-16 lg:w-16 "  color='#25D366'   height={100} width={100} />
        </Link> 
         )

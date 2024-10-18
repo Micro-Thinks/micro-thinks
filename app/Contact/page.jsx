@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import emailjs from 'emailjs-com';  
+import { toast } from "react-toastify";
 
 const ContacForm = ({ref}) => {
   const [formData, setFormData] = useState({
@@ -13,17 +15,66 @@ const ContacForm = ({ref}) => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+
+    // Prepare the data to send via EmailJS
+    const templateParams = {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      company: formData.company,
+      website: formData.website,
+      email: formData.email,
+      phone: formData.phone,
+      services: formData.services,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        (response) => {
+          setIsSubmitting(false);
+          toast.success("Submitted Successfully")
+          setErrorMessage('');
+          // Clear form after success
+          setFormData({
+            firstName: "",
+            lastName: "",
+            company: "",
+            website: "",
+            email: "",
+            phone: "",
+            services: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setIsSubmitting(false);
+          toast.error("Submission failed")
+          setSuccessMessage('');
+
+        }
+      );
   };
   return (
     <div className="min-h-screen  p-2" ref={ref} id="contact-form">
-      <div className="w-full lg:h-[30vh] h-[15vh] rounded-r-xl bg-blue-950 lg:my-10 my-2 flex items-center">
-        <h1 className="text-white pl-6 text-2xl font-semibold">Contact</h1>
+      <div className="w-full lg:h-[30vh] h-[15vh] rounded-r-xl bg-blue-950 lg:my-10 my-2 justify-center  flex items-center">
+        <h1 className="text-white pl-6  text-2xl xl:text-4xl   lg:text-3xl font-semibold">Contact</h1>
       </div>
       <div className="flex justify-center items-center p-2">
         <form className="space-y-4 border-2 p-4 shadow-xl rounded-xl" onSubmit={handleSubmit}>

@@ -11,6 +11,7 @@ const Hero = ({slidetoContactForm}) => {
 
   const slides = [
     {
+      
       imgSrc: "/images/Home.webp",
       title: (
         <>
