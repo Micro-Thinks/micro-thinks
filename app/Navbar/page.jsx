@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: "About", sectionId: "about-us" },
     { name: "OTA Platforms", sectionId: "OTA" },
     { name: "Services", sectionId: "services" },
-    { name: "Contact", sectionId: "contact" },
+    { name: "Contact", sectionId: "contact-form" },
   ];
 
   const scrollToSection = (sectionId) => {

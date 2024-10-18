@@ -43,7 +43,7 @@ const Sidebar = ({ navbar = [], closeSidebar, scrollToSection }) => {
             {nav.name}
           </button>
         ))}
-      <button onClick={() => scrollToSection("contact")} className="bg-[#F89522] px-4 py-2 rounded-3xl text-white w-full">
+      <button onClick={() => scrollToSection("contact-form")} className="bg-[#F89522] px-4 py-2 rounded-3xl text-white w-full">
         Get Started
         </button>
     </motion.div>
