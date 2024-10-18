@@ -11,7 +11,7 @@ const Navbar = () => {
     { name: "About", sectionId: "about-us" },
     { name: "OTA Platforms", sectionId: "OTA" },
     { name: "Services", sectionId: "services" },
-    { name: "Contact", sectionId: "contact" },
+    { name: "Contact", sectionId: "contact-form" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -66,7 +66,9 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:block bg-[#F89522]  px-3 py-2 rounded-3xl">
-        <button onClick={() => scrollToSection("contact-form")}>Get Started</button>
+        <button onClick={() => scrollToSection("contact-form")}>
+          Get Started
+        </button>
       </div>
 
       {isSidebarOpen && (
