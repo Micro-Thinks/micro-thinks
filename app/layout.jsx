@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Footer from "./Footer/page";
+import Navbar from "./Navbar/page";
 
 export const poppins = localFont({
   src: [
@@ -38,7 +40,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${questrial.variable} antialiased`}>
+      <Navbar />
+        
         {children}
+      <Footer />
+
       </body>
     </html>
   );
