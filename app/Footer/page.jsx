@@ -34,14 +34,14 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className=" space-y-3 mt-6 text-center  md:w-2/6  lg:mt-6">
+          <div className=" space-y-3 mt-6 text-center  md:w-2/6 lg:mt-6">
             <h1 className=" text-xl tracking-wider">You want to Book?</h1>
             <Link
               href="tel: +923064312116"
               target="_blank"
-              className="text-sm hover:text-[#F89522]   lg:-ml-12 ease-in-out duration-300 "
+              className="text-sm hover:text-[#F89522]    ease-in-out duration-300 "
             >
-              +92 306 4312116
+             Call at: +92 306 4312116
             </Link>
           </div>
         </div>
@@ -115,26 +115,36 @@ const Footer = () => {
 
         <div className="mt-12 border-t-2 p-4">
           <div className="text-white flex items-center justify-center space-x-4">
+            <Link href='https://www.facebook.com/Microthinksbyzaheer?mibextid=LQQJ4d' target="_blank">
             <Image src="/images/fb.png" alt="icon" height={30} width={30} />
+            </Link>
+            <Link href='https://www.instagram.com/microthinks?igsh=YnJ4cGJkem9zZWtx' target="_blank">
             <Image src="/images/insta.png" alt="icon" height={30} width={30} />
+            </Link>
+           <Link href='https://www.linkedin.com/company/microthinks/posts/?feedView=all' target="_blank">
             <Image
               src="/images/linkedin.png"
               alt="icon"
               height={30}
               width={30}
-            />
+              />
+              </Link>
           </div>
 
           <div>
-            <ul className="text-white flex flex-col lg:flex-row xl:flex-row lg:items-center xl:items-center space-y-2 justify-around mt-10 ">
-              <li>T&Cs Adagio</li>
-              <li>T&Cs</li>
-              <li> Membership T&Cs </li>
-              <li> Privacy Cookies</li>
-              <li> Legal Notice </li>
-              <li>Do Not Sell My Personal Information</li>
-            </ul>
-          </div>
+  <ul className="text-white flex flex-col lg:flex-row xl:flex-row lg:items-center xl:items-center lg:space-x-10 justify-around mt-10 space-y-2 lg:space-y-0">
+    <Link href="/TermsandConditions">
+      <li className="cursor-pointer">T&Cs</li>
+    </Link>
+    <Link href="/PrivacyPolicy">
+      <li className="cursor-pointer">Privacy Policy</li>
+    </Link>
+    <Link href="/LegalNotice">
+      <li className="cursor-pointer">Legal Notice</li>
+    </Link>
+  </ul>
+</div>
+
           <div className=" mt-10">
             <span className="text-white text-sm  lg:text-xl xl:text-xl flex items-center justify-center ">
               Copyright © MicroThinks 2024 All rights reserved
