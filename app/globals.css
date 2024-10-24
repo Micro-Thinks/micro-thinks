@@ -37,7 +37,6 @@ body {
 .heading-h5,
 .heading-h6 {
   font-family: var(--font-questrial);
-  color: var(--color-dark-navy);
 }
 
 ::-webkit-scrollbar {

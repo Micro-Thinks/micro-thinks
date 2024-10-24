@@ -60,7 +60,7 @@ const Aboutus = () => {
           transition={{ duration: 0.5 }}
           className="space-y-6 w-full lg:space-y-12 flex flex-col justify-center items-center lg:items-start"
         >
-          <h1 className="font-semibold text-3xl text-[#1F2456] lg:text-left">
+          <h1 className="font-semibold text-3xl text-[#1F2456] lg:text-left heading-h1">
             About Us
           </h1>
 
