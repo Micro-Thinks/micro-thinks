@@ -21,16 +21,16 @@ const Navbar = () => {
       const sectionId = window.location.hash.substring(1);
       const element = document.getElementById(sectionId);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
+        element.scrollIntoView({ behavior: "smooth" });
       }
     };
 
     // Listen for hash changes (when the component mounts)
-    window.addEventListener('hashchange', handleHashChange);
-    
+    window.addEventListener("hashchange", handleHashChange);
+
     // Clean up the event listener when the component unmounts
     return () => {
-      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
 
@@ -45,7 +45,7 @@ const Navbar = () => {
       }
     } else {
       // Navigate to home page and then scroll to the section
-      router.push("/" + '#' + sectionId); // Append the section ID as a hash
+      router.push("/" + "#" + sectionId); // Append the section ID as a hash
     }
 
     setIsSidebarOpen(false);
@@ -94,7 +94,9 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:block bg-[#F89522] px-3 py-2 rounded-3xl">
-        <button onClick={() => scrollToSection("contact-form")}>Get Started</button>
+        <button onClick={() => scrollToSection("contact-form")}>
+          Get Started
+        </button>
       </div>
 
       {isSidebarOpen && (

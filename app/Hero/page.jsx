@@ -5,13 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import MobileView from "./MobileView";
 import Link from "next/link";
 
-const Hero = ({slidetoContactForm}) => {
-  
+const Hero = ({ slidetoContactForm }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
     {
-      
       imgSrc: "/images/Home.webp",
       title: (
         <>
@@ -107,7 +105,7 @@ const Hero = ({slidetoContactForm}) => {
                   )}
                   <div className="space-y-4 text-left lg:order-1 lg:ml-16">
                     <motion.h1
-                      className="font-extrabold tracking-wider mt-1 xl:mt-4 w-full  text-5xl font-sans"
+                      className="font-extrabold tracking-wider mt-1 xl:mt-4 w-full  text-5xl .heading-h1"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.7 }}
@@ -122,12 +120,16 @@ const Hero = ({slidetoContactForm}) => {
                     >
                       {slide.description}
                     </motion.p>
-                    <Link href="#contact-form" > {/* Make sure to add scroll={false} */}
-  <button onClick={slidetoContactForm} className="bg-[#F89522] px-5 py-2 rounded-3xl">
-    Let&lsquo;s Start
-  </button>
-</Link>
-
+                    <Link href="#contact-form">
+                      {" "}
+                      {/* Make sure to add scroll={false} */}
+                      <button
+                        onClick={slidetoContactForm}
+                        className="bg-[#F89522] px-5 py-2 rounded-3xl"
+                      >
+                        Let&lsquo;s Start
+                      </button>
+                    </Link>
                   </div>
                 </motion.div>
               )
