@@ -15,8 +15,11 @@ const Hero = ({slidetoContactForm}) => {
       imgSrc: "/images/Home.webp",
       title: (
         <>
+        <div className="flex w-screen">
+
           <span className="text-[#1F2456] font-extrabold">Your Brand, </span>
           <span className="text-[#808EAB]">Our Strategy, </span> <br />
+        </div>
           <span className="text-[#F89522] font-extrabold  block">
             Ultimate Growth
           </span>
