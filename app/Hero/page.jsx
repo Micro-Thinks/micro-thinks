@@ -66,7 +66,7 @@ const Hero = ({ slidetoContactForm }) => {
   };
 
   useEffect(() => {
-    const interval = setInterval(handleNext, 3000);
+    const interval = setInterval(handleNext, 5000);
 
     return () => clearInterval(interval);
   }, [handleNext]);
