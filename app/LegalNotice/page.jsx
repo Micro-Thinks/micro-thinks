@@ -14,15 +14,18 @@ const page = () => {
           <div className="bg-white p-12   flex flex-col  items-center justify-center   ">
             <div className="w-[60vw] space-y-2">
               <p className=" ">
-                Microthinks.com serves legal notice to inform users that by
-                accessing and using our website and services, you must follow
-                our rules and regulations. Please keep in mind that the
-                exploitation of our services and the unauthorized use of our
-                website may lead to instant loss of access to our site and
-                potential legal action. We maintain the right to update all
-                these actions according to new standards, so staying informed of
-                any changes is essential. Violating these terms may result in
-                the termination of the account and serious legal implications.
+                <Link href="/" className="text-blue-500">
+                  Microthinks.com
+                </Link>{" "}
+                serves legal notice to inform users that by accessing and using
+                our website and services, you must follow our rules and
+                regulations. Please keep in mind that the exploitation of our
+                services and the unauthorized use of our website may lead to
+                instant loss of access to our site and potential legal action.
+                We maintain the right to update all these actions according to
+                new standards, so staying informed of any changes is essential.
+                Violating these terms may result in the termination of the
+                account and serious legal implications.
               </p>
               <p>
                 If you choose to engage with our website, you recognize your

@@ -13,11 +13,15 @@ const page = () => {
         <div className="bg-white p-12   flex flex-col  items-center justify-center   ">
           <div className="w-[60vw] space-y-2">
             <p className=" ">
-              At Microthinks.com, it is our ultimate responsibility to protect
-              your privacy. We adopt strict rules to ensure the protection of
-              your private data throughout every phase of our project. We
-              safeguard your critical facts from potential threats by using
-              cutting-edge tools and industry best practices.
+              At{" "}
+              <Link href="/" className="text-blue-500">
+                Microthinks.com
+              </Link>
+              , it is our ultimate responsibility to protect your privacy. We
+              adopt strict rules to ensure the protection of your private data
+              throughout every phase of our project. We safeguard your critical
+              facts from potential threats by using cutting-edge tools and
+              industry best practices.
             </p>
             <p>
               <Link href="/" className="text-blue-500">
@@ -32,9 +36,12 @@ const page = () => {
               protocols and makes sure that we are securing your interests
               carefully. With our emphasis on transparent communication and
               dedicated support, you can feel confident that your brand is fully
-              secure at our company. Trust Microthinks.com to deliver innovative
-              hotel marketing solutions while prioritizing your security at
-              every step.
+              secure at our company. Trust{" "}
+              <Link href="/" className="text-blue-500">
+                Microthinks.com
+              </Link>{" "}
+              to deliver innovative hotel marketing solutions while prioritizing
+              your security at every step.
             </p>
           </div>
         </div>
